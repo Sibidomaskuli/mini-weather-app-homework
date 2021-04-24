@@ -2,15 +2,21 @@
   max-width: 75%;  
 }  
 
-.Forecasting {
-  color: #868b90;
+.temperature {
   display: inline-block;
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 48px;
+  line-height: 60px;
   padding-left: 0; 
   padding-top: 0;
 }
 
 .Units {
   color: #868b90;
+}
+
+ul {
+  color: #868b90;
+  display: inline-block;
+  line-height: 16px;
+  list-style: none;  
 }

@@ -17,7 +17,7 @@ export default function Forecast(){
          °C |°F
         </span>
         <div className="col">
-         <ul>
+         <ul className="Forecasting">
           <li>Precipitation: 1%</li>
           <li>Humidity: 34%</li>
           <li>Wind: 16 km/h</li>
