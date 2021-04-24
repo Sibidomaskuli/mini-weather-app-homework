@@ -1,1 +1,6 @@
+{
+    "editor.tabSize": 2,
+    "editor.formatOnType": true,
+    "prettier.enableDebugLogs": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
