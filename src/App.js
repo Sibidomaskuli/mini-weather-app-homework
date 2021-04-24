@@ -9,14 +9,15 @@ export default function App() {
       <h2>Weather Search App</h2>
       <Forecast />
       <footer>
-        Made by <em>Shirin Eldris</em> 🤖 and is <a
-          href="https://github.com/Sibidomaskuli/mini-weather-app-homework"
-          target="-blank"
-          >
-            open-sourced on GitHub
-        </a>
-        </footer>
-        </div>
+              Made by <em>Shirin Eldris</em> 🤖 and is {""}
+                <a
+                  href="https://github.com/Sibidomaskuli/mini-weather-app-homework"
+                  target="-blank"
+                >
+                  open-sourced on GitHub
+                </a>
+            </footer>
+      </div>
     </div>
   );
 }

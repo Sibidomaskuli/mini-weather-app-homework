@@ -1,0 +1,16 @@
+.card {
+  max-width: 45%;  
+}  
+
+.Forecasting {
+  color: #868b90;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 16px;
+  padding-left: 0; 
+  padding-top: 0;
+}
+
+.Units {
+  color: #868b90;
+}
