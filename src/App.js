@@ -4,7 +4,8 @@ import './App.css';
 export default function App() {
   return (
     <div className="App">
-      Weather App
+      <div className="container"> 
+      <h2>Weather Search App</h2>
       <footer>
         Made by <em>Shirin Eldris</em> 🤖 and is <a
           href="https://github.com/Sibidomaskuli/mini-weather-app-homework"
@@ -13,6 +14,7 @@ export default function App() {
             open-sourced on GitHub
         </a>
         </footer>
+        </div>
     </div>
   );
 }
