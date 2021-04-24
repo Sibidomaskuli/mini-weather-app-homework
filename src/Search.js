@@ -13,6 +13,7 @@ export default function Search () {
        className="form-control"
       />
      </div>
+     <div className="col-3">
       <input type="submit"
        value="Search"
        className="btn btn-primary" />
