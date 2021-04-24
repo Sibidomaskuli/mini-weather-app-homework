@@ -17,6 +17,7 @@
 ul {
   color: #868b90;
   display: inline-block;
+  font-size: 12px;
   line-height: 16px;
   list-style: none;  
 }

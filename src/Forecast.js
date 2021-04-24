@@ -5,9 +5,11 @@ export default function Forecast(){
     return (
      <div className="card">
       <div className="card-body">
-       <div className="row justify-contents-around">
+<div className="container">
+        <div className="row">
+         <div className="col-xs-6">
        <div className="col">
-        <img
+        <img className="float-left"
         src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
         >
         </img>
@@ -15,14 +17,14 @@ export default function Forecast(){
         17 {""}</span>
         <span className="Units">
          °C |°F
-        </span>
-        <div className="col">
-         <ul className="Forecasting">
+        </span>        
+         <ul>
           <li>Precipitation: 1%</li>
           <li>Humidity: 34%</li>
           <li>Wind: 16 km/h</li>
-         </ul>
-        </div>
+         </ul>          
+          </div>
+       </div>
        </div>
        </div>
       </div>
