@@ -18,13 +18,20 @@ export default function Forecast(){
         <span className="Units">
          °C |°F
         </span>        
-         <ul>
+         <ul className="Forecasting">
           <li>Precipitation: 1%</li>
           <li>Humidity: 34%</li>
           <li>Wind: 16 km/h</li>
          </ul>          
           </div>
-       </div>
+         </div>
+         <div className="col-xs-6">
+          <ul className="cityName">
+           <li>Bracknagh, County Offaly</li>
+           <li>Saturday 18:00</li>
+           <li>Sunny</li>
+          </ul>        
+        </div>  
        </div>
        </div>
       </div>
