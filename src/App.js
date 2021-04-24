@@ -6,18 +6,24 @@ import './App.css';
 export default function App() {
   return (
     <div className="App">
-      <div className="container"> 
-        <h2>Weather Search App</h2>        
-      <Forecast />
-      <footer>
-              Made by <em>Shirin Eldris</em> 🤖 and is {""}
-                <a
-                  href="https://github.com/Sibidomaskuli/mini-weather-app-homework"
-                  target="-blank"
-                >
-                  open-sourced on GitHub
+      <div className="container">
+        <Forecast />
+        <footer>
+          Brain- stormed by <em>Shirin Eldris</em> 🤖, { "" }
+          <a
+            href="https://github.com/Sibidomaskuli/mini-weather-app-homework"
+            className="purple"
+            rel="noopener noreferrer"
+          >
+            open-sourced on GitHub,
                 </a>
-            </footer>
+          <a href="#"
+            className="green"
+            target="_blank"
+            rel="noopener noreferrer"
+          > Netlify hosted
+          </a>
+        </footer>
       </div>
     </div>
   );

@@ -1,5 +1,7 @@
 .card {
-  max-width: 85%;  
+  max-width: 85%; 
+  border-top: 200px; 
+  position: flexible;
 }  
 
 .temperature {
