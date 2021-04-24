@@ -1,12 +1,14 @@
 import React from "react";
 import "./Forecast.css";
+import Search from "./Search";
 
 export default function Forecast(){
     return (
      <div className="card">
       <div className="card-body">
-<div className="container">
-        <div className="row">
+      <Search />
+       <div className="container">
+        <div className="row">          
          <div className="col-xs-6">
        <div className="col">
         <img className="float-left"

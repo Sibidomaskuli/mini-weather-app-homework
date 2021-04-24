@@ -1,5 +1,5 @@
 .card {
-  max-width: 75%;  
+  max-width: 85%;  
 }  
 
 .temperature {
@@ -12,21 +12,22 @@
 
 .Units {
   color: #868b90;
+  font-size: 17px;
 }
 
 .Forecasting {
   color: #868b90;
   display: inline-block;
-  font-size: 12px;
+  font-size: 15px;
   line-height: 16px;
   list-style: none;  
 }
 
 .cityName {
-  color: rgb(221, 221, 221);
+  color: black;
   display: block;
   font-family: arial, sans-serif;
-  font-size: 22px;
+  font-size: 25px;
   font-weight: 400;
   height: 26px;
   line-height: 26px;
