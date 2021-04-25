@@ -1,0 +1,32 @@
+<div className="card-body">        
+       <h3>Weather Search App</h3>
+        <Search />
+      <div className="container">
+       <div className="row">
+        <div className="col-6">
+         <div className="Clearfix"
+          <img className="float-left"
+               src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"/>
+            </div>
+            <span className="temperature">
+            17 { "" }</span>
+            <span className="Units">
+             °C |°F
+            </span>
+              <ul className="Forecasting">
+               <li>Precipitation: 1%</li>
+               <li>Humidity: 34%</li>
+               <li>Wind: 16 km/h</li>
+              </ul>
+            </div>
+            <div className="col-6">
+              <ul className="cityName">
+                <li>Bracknagh, County Offaly</li>
+                <li>Saturday 18:00</li>
+                <li>Sunny</li>
+              </ul>
+            </div>
+        </div>
+       </div>
+      </div>
+          
