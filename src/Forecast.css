@@ -9,13 +9,12 @@
   padding: 10px;   
   border-radius: 4px;
 }
+.card-body {
+  background-color: orange;
+}
 
 .card-body form {
   margin-bottom: 5px;
-}
-
-.card-body {
-  background-color: orange;
 }
 
 h3 {
@@ -33,6 +32,11 @@ h3 {
 .Units {
   color: #868b90;
   font-size: 17px;
+  font-weight: 400;
+  position: relative;
+  top: -26px;
+  line-height: 2;
+  margin-left: 5px;
 }
 
 .Forecasting {
