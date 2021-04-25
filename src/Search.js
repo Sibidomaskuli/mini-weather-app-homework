@@ -1,26 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import "./Search.css";
 
 export default function Search (){
- function displayCoordinates ( response ) {
-  console.log( response.data );
-  console.log( response.data[ 0 ].lat );
-  console.log( response.data[ 0 ].lon );
+ const [ city, setCity ] = useState( null );
+ const [ weather, setWeather ] = useState( null );
+ 
+ function updateCity ( event ){
+  setCity( event.target.value ); 
  }
- const apiKey = "61de322b4c57e14ee5306e572d84bdb5";
- let city = "London, UK";
- let url = `https://api.openweathermap.org/geo/1.0/direct?q=${ city }&limit=5&appid=${ apiKey }&units=metric`;
- axios.get( url ).then( displayCoordinates );
+ 
+ function handleSubmit ( event ){
+  event.preventDefault();
+  const key = "61de322b4c57e14ee5306e572d84bdb5";
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${ city }&appid=${ key }&units=metric`;
+  axios.get( url ).then( displayResult );
+}
+
+ function displayResult ( response ){
+  console.log( response.data );
+  console.log( response.data.coord.lat );
+
+  
+ 
+ 
+}
+ 
 
  return (
-   <div className="Search">
+   <div className="Search">  
 
 
-    
-
-
-   <form>
+   <form onSubmit={handleSubmit}>
     <div className="row">
      <div className="col-10">
       <input
@@ -28,6 +39,7 @@ export default function Search (){
        placeholder="Enter a city.."
        className="form-control"
        autoFocus="on"
+       onChange={updateCity}
       />
      </div>
      <div className="col-2">
