@@ -27,7 +27,6 @@ export default function Forecast (){
    wind: Math.round(response.data.wind.speed),
    city: response.data.main.name,
    description: response.data.weather[ 0 ].description,
-
   })
  }
  return (
