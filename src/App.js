@@ -13,6 +13,7 @@ export default function App() {
           <a
             href="https://github.com/Sibidomaskuli/mini-weather-app-homework"
             className="purple"
+            target="-blank"
             rel="noopener noreferrer"
           >
             open-sourced on GitHub,
