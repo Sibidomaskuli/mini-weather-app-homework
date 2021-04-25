@@ -1,6 +1,5 @@
 import React from "react";
 import "./Forecast.css";
-import Search from "./Search";
 import Footer from "./Footer";
 
 export default function Forecast(){
@@ -8,7 +7,24 @@ export default function Forecast(){
     <div className="card">
       <div className="card-body">
         <h3>Weather Search App</h3>
-        <Search />
+        <form>
+    <div className="row">
+     <div className="col-10">
+      <input
+       type="search"
+       placeholder="Enter a city.."
+       className="form-control"
+       autoFocus="on"
+       
+      />
+     </div>
+     <div className="col-2">
+      <input type="submit"
+       value="Search"
+       className="btn btn-success w-100" />
+     </div>
+    </div>
+   </form>
         <div className="container">
           <div className="row">
             <div className="col-6">

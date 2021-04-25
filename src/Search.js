@@ -4,7 +4,7 @@ import "./Search.css";
 
 export default function Search (){
  const [ city, setCity ] = useState( null );
- const [ weather, setWeather ] = useState( null );
+ const [ weather, setWeather ] = useState({});
  
  function updateCity ( event ){
   setCity( event.target.value ); 
@@ -19,17 +19,21 @@ export default function Search (){
 
  function displayResult ( response ){
   console.log( response.data );
-  console.log( response.data.coord.lat );
-
+  let iconCode = response.data.weather[ 0 ].icon;
+  let iconUrl = `https://openweathermap.org/img/wn/${ iconCode }@2x.png`;
+  setWeather( {
+   icon: response.data.weather[ 0 ].icon,
+   temperature:  Math.round( response.data.main.temp ),
+   humidity: response.data.main.humidity,
+   wind: Math.round(response.data.wind.speed),
+   city: response.data.main.name,
+   description: response.data.weather[ 0 ].description,
+  })
+ 
+ }
   
- 
- 
-}
- 
-
  return (
    <div className="Search">  
-
 
    <form onSubmit={handleSubmit}>
     <div className="row">
