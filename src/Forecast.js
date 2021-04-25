@@ -19,14 +19,17 @@ export default function Forecast (){
  }
 
  function displayResult ( response ) {
-  console.log( response.data );
-  setWeatherData( {
-   icon: response.data.weather[ 0 ].icon,
-   temperature:  Math.round( response.data.main.temp ),
-   humidity: response.data.main.humidity,
-   wind: Math.round(response.data.wind.speed),
-   city: response.data.main.name,
-   description: response.data.weather[ 0 ].description,
+   console.log( response.data );
+   let iconCode = response.data.weather[0].icon;
+		let iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+   setWeatherData( {
+    temperature:  Math.round( response.data.main.temp ),
+    humidity: response.data.main.humidity,
+    wind: Math.round(response.data.wind.speed),
+    city: response.data.main.name,
+    description: response.data.weather[ 0 ].description,
+    icon: <img src={iconUrl} alt={response.data.weather[0].description} />,
+   
   })
  }
  return (
@@ -55,13 +58,13 @@ export default function Forecast (){
           <div className="row">
             <div className="col-6">
               <div className="Clearfix">
-                <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                <img src="https://ssl.gstatic.com/onebox/weather/64/${weatherData.icon}.png"
                   alt="Sunny"
                   className="float-left"
                 />
               </div>
               <span className="temperature">
-                <strong>{Math.round( response.data.main.temp )} {""}</strong>
+                <strong>{weatherData.temperature} {""}</strong>
               </span>
               <span className="Units">°C |°F</span>
               <ul className="Forecasting">
