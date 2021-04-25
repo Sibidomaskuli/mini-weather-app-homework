@@ -1,19 +1,20 @@
-.card-body {
-  padding: 6px;   
+.card {  
+  border-top: 250px; 
+  position: flexible;
+  margin: 29px; 
 }
 
-.card {  
-  border-top: 200px; 
-  position: flexible;
-  margin: 26px; 
-}  
+.card-body {
+  padding: 10px;   
+  border-radius: 4px;
+}
 
 .card-body {
   background-color: orange;
 }
 
 h3 {
-  margin-left: 290px;
+  margin-left: 300px;
 }
 
 .temperature {
