@@ -6,7 +6,7 @@ export default function Forecast(){
   return (
     <div className="card">
       <div className="card-body">
-        <h2>Weather Search App</h2>
+        <h3>Weather Search App</h3>
         <Search />
         <div className="container">
           <div className="row">

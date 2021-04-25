@@ -8,6 +8,10 @@
   background-color: lemonchiffon;
 }
 
+h3 {
+  margin-left: 250px;
+}
+
 .temperature {
   display: inline-block;
   font-size: 48px;
@@ -41,4 +45,3 @@
   width: 326px;
   list-style: none;
 }
-
