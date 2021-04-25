@@ -16,6 +16,7 @@ export default function Search () {
      <div className="col-2">
       <input type="submit"
        value="Search"
+       className="btn btn-success" />
      </div>
     </div>
    </form>
