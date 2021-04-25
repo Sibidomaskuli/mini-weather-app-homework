@@ -1,15 +1,19 @@
-.card {
-  max-width: 85%; 
+.card-body {
+  padding: 6px;   
+}
+
+.card {  
   border-top: 200px; 
   position: flexible;
+  margin: 26px; 
 }  
 
 .card-body {
-  background-color: lemonchiffon;
+  background-color: orange;
 }
 
 h3 {
-  margin-left: 250px;
+  margin-left: 290px;
 }
 
 .temperature {
@@ -39,9 +43,12 @@ h3 {
   font-family: arial, sans-serif;
   font-size: 25px;
   font-weight: 400;
-  height: 26px;
-  line-height: 26px;
+  height: 23px;
+  line-height: 24px;
   text-align: right;
-  width: 326px;
+  width: 340px;
   list-style: none;
 }
+
+
+  
