@@ -18,10 +18,10 @@ export default function App() {
           >
             open-sourced on GitHub,
                 </a>
-          <a href="#"
+          <a href="#"            
             className="green"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer"            
           > Netlify hosted
           </a>
         </footer>
@@ -29,5 +29,5 @@ export default function App() {
     </div>
   );
 }
-
+<button type="button" class="btn btn-link">Link</button>
 
