@@ -4,6 +4,10 @@
   position: flexible;
 }  
 
+.card-body {
+  background-color: lemonchiffon;
+}
+
 .temperature {
   display: inline-block;
   font-size: 48px;
