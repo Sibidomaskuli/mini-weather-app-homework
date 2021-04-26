@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import axios from "axios"; 
+import React, {useState} from "react";
+import FormattedDate from "./FormattedDate"
 import Footer from "./Footer";
+import axios from "axios"; 
 import "./Forecast.css";
 
 export default function Forecast (){
@@ -20,17 +21,16 @@ export default function Forecast (){
 
  function displayResult ( response ) {
    console.log( response.data );
-   let iconCode = response.data.weather[0].icon;
-		let iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
-   setWeatherData( {
-    temperature:  Math.round( response.data.main.temp ),
+   setWeatherData({
+    temperature: Math.round(response.data.main.temp),
     humidity: response.data.main.humidity,
     wind: Math.round(response.data.wind.speed),
     city: response.data.main.name,
-    description: response.data.weather[ 0 ].description,
-    icon: <img src={iconUrl} alt={response.data.weather[0].description} />,
+    description: response.data.weather[0].description,
+    date: new Date(response.data.dt*1000),
+    iconUrl: "https://ss1.gstatic.com/onebox/weather/64/partly_cloudy.png",
    
-  })
+   });
  }
  return (
     <div className="card">
@@ -68,7 +68,6 @@ export default function Forecast (){
               </span>
               <span className="Units">°C |°F</span>
               <ul className="Forecasting">
-              <li>Precipitation: 1%</li>
               <li>Humidity: {weatherData.humidity} %</li>
               <li>Wind: {weatherData.wind} km/h</li>
             </ul>
@@ -76,7 +75,7 @@ export default function Forecast (){
             <div className="col-6">
             <ul className="cityName">
         <li>{weatherData.city}</li>
-              <li>Saturday 18:00</li>
+              <li><FormattedDate date={weatherData.date} /></li>
         <li>{weatherData.description}</li>
             </ul>
             </div>
