@@ -4,8 +4,8 @@ import Footer from "./Footer";
 import axios from "axios"; 
 import "./Forecast.css";
 
-export default function Forecast (){
- const [ city, setCity ] = useState( null );
+export default function Forecast (props){
+ const [ city, setCity ] = useState(props.defaultCity);
  const [ weatherData, setWeatherData ] = useState({});
 
  function updateCity ( event ){
@@ -19,12 +19,12 @@ export default function Forecast (){
   axios.get( url ).then( displayResult );
  }
 
- function displayResult ( response ) {
+ function displayResult (response) {
     setWeatherData({
     temperature: Math.round(response.data.main.temp),
     humidity: response.data.main.humidity,
     wind: Math.round(response.data.wind.speed),
-    city: response.data.main.name,
+    city: response.data.name,
     description: response.data.weather[0].description,
     date: new Date(response.data.dt*1000),
     iconUrl: "https://ss1.gstatic.com/onebox/weather/64/partly_cloudy.png",   
