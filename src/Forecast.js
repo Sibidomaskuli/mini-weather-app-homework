@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import FormattedDate from "./FormattedDate"
+import WeatherInfo from "./WeatherInfo";
 import Footer from "./Footer";
 import axios from "axios"; 
 import "./Forecast.css";
@@ -20,73 +20,44 @@ export default function Forecast (){
  }
 
  function displayResult ( response ) {
-   console.log( response.data );
-   setWeatherData({
+    setWeatherData({
     temperature: Math.round(response.data.main.temp),
     humidity: response.data.main.humidity,
     wind: Math.round(response.data.wind.speed),
     city: response.data.main.name,
     description: response.data.weather[0].description,
     date: new Date(response.data.dt*1000),
-    iconUrl: "https://ss1.gstatic.com/onebox/weather/64/partly_cloudy.png",
-   
+    iconUrl: "https://ss1.gstatic.com/onebox/weather/64/partly_cloudy.png",   
    });
- }
+  }
+  
  return (
-    <div className="card">
-      <div className="card-body">
-        <h3>Weather Search App</h3>
-        <form onSubmit={handleSubmit}>
-    <div className="row">
-     <div className="col-10">
-      <input
-       type="search"
-       placeholder="Enter a city.."
-       className="form-control"
-       autoFocus="on"
-       onChange={updateCity}
-      />
-     </div>
-     <div className="col-2">
-      <input type="submit"
-       value="Search"
-       className="btn btn-success w-100" />
-     </div>
-    </div>
-   </form>
-        <div className="container">
-          <div className="row">
-            <div className="col-6">
-              <div className="Clearfix">
-                <img src="https://ssl.gstatic.com/onebox/weather/64/${weatherData.icon}.png"
-                  alt="Sunny"
-                  className="float-left"
-                />
-              </div>
-              <span className="temperature">
-                <strong>{weatherData.temperature} {""}</strong>
-              </span>
-              <span className="Units">°C |°F</span>
-              <ul className="Forecasting">
-              <li>Humidity: {weatherData.humidity} %</li>
-              <li>Wind: {weatherData.wind} km/h</li>
-            </ul>
-            </div>
-            <div className="col-6">
-            <ul className="cityName">
-        <li>{weatherData.city}</li>
-              <li><FormattedDate date={weatherData.date} /></li>
-        <li>{weatherData.description}</li>
-            </ul>
-            </div>
-          </div>
- 
-        </div>
+  <div className="card">
+   <div className="card-body">
+    <h3>Weather Search App</h3>
+    <form onSubmit={handleSubmit}>
+     <div className="row">
+      <div className="col-10">
+       <input
+        type="search"
+        placeholder="Enter a city.."
+        className="form-control"
+        autoFocus="on"
+        onChange={updateCity}
+       />
       </div>
- 
-      <Footer />
-    </div>    
-  );
+      <div className="col-2">
+       <input type="submit"
+        value="Search"
+        className="btn btn-success w-100" />
+      </div>
+     </div>
+    </form>
+    <WeatherInfo data={weatherData}/>
+   </div>
+   <Footer />
+  </div>
+ );
 }
 
             
