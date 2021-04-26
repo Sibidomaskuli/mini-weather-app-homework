@@ -14,10 +14,12 @@ export default function Forecast (props){
 
  function handleSubmit ( event ) {
   event.preventDefault();
-  const key = "61de322b4c57e14ee5306e572d84bdb5";
-  let url = `https://api.openweathermap.org/data/2.5/weather?q=${ city }&appid=${ key }&units=metric`;
-  axios.get( url ).then( displayResult );
- }
+
+  }
+  
+const key = "61de322b4c57e14ee5306e572d84bdb5";
+let url = `https://api.openweathermap.org/data/2.5/weather?q=${ city }&appid=${ key }&units=metric`;
+axios.get( url ).then( displayResult );
 
  function displayResult (response) {
     setWeatherData({
