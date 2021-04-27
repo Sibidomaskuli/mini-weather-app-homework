@@ -23,11 +23,12 @@ export default function Forecast (props){
    axios.get(url).then(displayResult);   
   }
   
-  function displayResult (response) {
-   setWeatherData({
+ function displayResult(response) {
+  console.log(response.data);
+   setWeatherData({    
     ready: true, 
     temperature: Math.round(response.data.main.temp),
-    feels like: Math.round(response.data.main.feels_like),
+    pressure: response.data.main.pressure, 
     humidity: response.data.main.humidity,
     wind: Math.round(response.data.wind.speed),
     city: response.data.name,

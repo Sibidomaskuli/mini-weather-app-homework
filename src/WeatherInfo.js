@@ -18,6 +18,7 @@ export default function WeatherInfo(props) {
       <Converter celsius={props.data.temperature}/>
       
       <ul className="Forecasting">
+       <li>Atmospheric Pressure: {props.data.pressure} hPa</li>
        <li>Humidity: {props.data.humidity} %</li>
        <li>Wind: {props.data.wind} km/h</li>
       </ul>
