@@ -1,6 +1,7 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
+import Converter from "./Converter"; 
 
 export default function WeatherInfo(props) {
  return (
@@ -14,10 +15,8 @@ export default function WeatherInfo(props) {
          code={props.data.icon} />
        </div>       
       </div>
-      <span className="temperature">
-       <strong>{props.data.temperature} {""}</strong>
-      </span>
-      <span className="Units">°C |°F</span>
+      <Converter celsius={props.data.temperature}/>
+      
       <ul className="Forecasting">
        <li>Humidity: {props.data.humidity} %</li>
        <li>Wind: {props.data.wind} km/h</li>
