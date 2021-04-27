@@ -5,18 +5,18 @@ import axios from "axios";
 import "./Forecast.css";
 
 export default function Forecast (props){
- const [ city, setCity ] = useState(props.defaultCity);
- const [ weatherData, setWeatherData ] = useState({});
+ const [city, setCity] = useState(props.defaultCity);
+ const [weatherData, setWeatherData] = useState({});
 
- function updateCity ( event ){
-  setCity( event.target.value );
+ function updateCity (event){
+  setCity(event.target.value);
  }
 
- function handleSubmit ( event ) {
+ function handleSubmit (event) {
    event.preventDefault();
-   const key = "61de322b4c57e14ee5306e572d84bdb5";
-   let url = `https://api.openweathermap.org/data/2.5/weather?q=${ city }&appid=${ key }&units=metric`;
-   axios.get( url ).then( displayResult );   
+   const key="64c64ffadfe4c3d751ef8a44c2608885";
+   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
+   axios.get(url).then(displayResult);   
   }
   
 
@@ -28,7 +28,7 @@ export default function Forecast (props){
     city: response.data.name,
     description: response.data.weather[0].description,
     date: new Date(response.data.dt*1000),
-    iconUrl: "https://openweathermap.org/img/wn/10d@2x.png",   
+    icon: response.data.weather[0].icon, 
    });
   }
   
