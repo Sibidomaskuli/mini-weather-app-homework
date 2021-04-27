@@ -50,7 +50,7 @@ export default function Forecast (props){
             <div className="col-2">
               <input type="submit"
                 value="Search"
-                className="btn btn-success w-100" />
+                className="btn btn-info w-100" />
             </div>
           </div>
         </form>

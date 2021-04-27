@@ -20,12 +20,12 @@ export default function Converter(props) {
   return (
     <span>
       <span className="temperature">
-        <strong>{Math.round(props.celsius)} {""}</strong>
+        <strong>{Math.round(props.celsius)}</strong>
       </span>
-      <span className="Units">°C |
+      <span className="Units">°C 
       <a href="/"
           onClick={displayFahren}>
-          °F</a>
+          {""}| °F</a>
       </span>
     </span>
     );
@@ -35,11 +35,11 @@ export default function Converter(props) {
      <span className="temperature">
       <strong>{Math.round(fahrenheit)} {""}</strong>
      </span>
-     <span className="Units">°C |
+     <span className="Units">°C{""}
         <a href="/"
        onClick={displayFahren}>
-       °C </a> {""}
-        | °F
+        </a> {""}
+        {""}| °F
         </span>
     </span>
    );
