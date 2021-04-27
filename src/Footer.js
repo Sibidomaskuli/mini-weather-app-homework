@@ -14,7 +14,7 @@ export default function Footer (){
     >
      Open-Sourced on GitHub,
     </a>
-    <a href="/" className="green" target="_blank" rel="noopener noreferrer">
+    <a href="https://kind-pasteur-be29fd.netlify.app/" className="green" target="_blank" rel="noopener noreferrer">
      {" "}
      Netlify hosted
     </a>
