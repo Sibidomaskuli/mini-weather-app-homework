@@ -16,16 +16,17 @@ export default function Converter(props) {
   return (props.celsius * 9) /5 + 32;
  }
   
-  if (unit==="celsius") {
-  return (
+  if (unit === "celsius") {
+  return ( 
     <span>
       <span className="temperature">
         <strong>{Math.round(props.celsius)}</strong>
       </span>
-      <span className="Units">°C 
-      <a href="/"
-          onClick={displayFahren}>
-          {""}| °F</a>
+      <span className="Units">
+      C° |{" "}
+      <a href="/" onClick={displayFahren}>
+          °F
+      </a>
       </span>
     </span>
     );
@@ -33,14 +34,16 @@ export default function Converter(props) {
    return (
     <span>
      <span className="temperature">
-      <strong>{Math.round(fahrenheit)} {""}</strong>
+      <strong>
+       {Math.round(fahrenheit())} {""}
+      </strong>
      </span>
-     <span className="Units">°C{""}
-        <a href="/"
-       onClick={displayFahren}>
-        </a> {""}
-        {""}| °F
-        </span>
+     <span className="Units">
+      °F |{""}
+      <a href="/" onClick={displayCelsius}>
+       C°
+      </a>
+     </span>
     </span>
    );
   }
