@@ -8,3 +8,17 @@ background-image: url("https://wallpaperaccess.com/full/371818.jpg");
 
 // Always copy image address not link address 
 
+body {
+  font-family: "Yantramanav", sans-serif;
+  color: white;
+  background-image: url(https://www.teahub.io/photos/full/256-2567614_photo-wallpaper-grass-the-sun-macro-sunset-nature.jpg);
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-size: cover;
+  background-blend-mode: darken;
+ }
+
+
+.container {
+  max-width: 800px;
+}
