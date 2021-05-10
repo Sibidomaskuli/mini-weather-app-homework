@@ -1,6 +1,6 @@
 .App {
   max-width: 50%;
-  margin: 0 auto; 
+  margin: 0 auto;   
 }
 
 body {
@@ -11,5 +11,6 @@ body {
   line-height: 1.5;
   color: rgb(0,0,0);
   text-align: left;
-  background-color: #e4fbff; 
+  background-image: url("https://i.pinimg.com/originals/12/25/8a/12258aa80d5bbe28120b77537dcf8668.png");  
 } 
+
